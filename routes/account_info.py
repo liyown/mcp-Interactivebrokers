@@ -2,6 +2,7 @@ import asyncio
 from fastapi import APIRouter, Request
 from fastapi.responses import StreamingResponse
 from core import ib
+from core.config import get_settings
 from utils.data_convert import format_account_summary, ApiResponse
 from typing import AsyncGenerator
 
@@ -39,7 +40,9 @@ async def connect_ib():
     if ib.isConnected():
         return ApiResponse.success("IB already connected")
     try:
-        await ib.connectAsync("127.0.0.1", 7497, clientId=1)
+        await ib.connectAsync(
+            get_settings().TWS_HOST, get_settings().TWS_PORT, clientId=1
+        )
         return ApiResponse.success("IB connected")
     except Exception as e:
         return ApiResponse.error(f"IB connection failed: {e}")

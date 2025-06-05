@@ -1,7 +1,10 @@
 [project]
 name = "mcp-interact-broker"
 version = "0.1.0"
-description = "Add your description here"
+description = "Interactive Brokers API wrapper with FastAPI and FastMCP"
+authors = [
+    {name = "Liu Yaowen", email = "liuyaowen_smile@126.com"},
+]
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -9,6 +12,7 @@ dependencies = [
     "fastmcp>=2.6.1",
     "ib-async>=1.0.3",
     "ib-fundamental>=0.0.5",
+    "loguru>=0.7.3",
     "pandas>=2.2.3",
     "setuptools>=80.3.1",
     "tzdata>=2025.2",

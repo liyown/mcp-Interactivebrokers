@@ -1,1290 +1,190 @@
-{
-    "AccountCode": {
-        "value": "DUK967383",
-        "currency": "",
-        "description": {
-            "en": "The account number.",
-            "zh": "账户号码。"
-        }
-    },
-    "AccountOrGroup": {
-        "value": "DUK967383",
-        "currency": "USD",
-        "description": {
-            "en": "The account or group identifier. In this case, it's the same as the account number.",
-            "zh": "账户或组标识符。在本例中，它与账户号码相同。"
-        }
-    },
-    "AccountReady": {
-        "value": "true",
-        "currency": "",
-        "description": {
-            "en": "Indicates whether the account is ready for trading.",
-            "zh": "指示账户是否已准备好进行交易。"
-        }
-    },
-    "AccountType": {
-        "value": "INDIVIDUAL",
-        "currency": "",
-        "description": {
-            "en": "The type of account.",
-            "zh": "账户类型。"
-        }
-    },
-    "AccruedCash": {
-        "value": "2843.91",
-        "currency": "USD",
-        "description": {
-            "en": "Accrued cash balance. Represents the cash that has accumulated over time but has not yet been credited to the account.",
-            "zh": "累计现金余额。代表随时间累积但尚未记入账户的现金。"
-        }
-    },
-    "AccruedCash-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Accrued cash balance for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的累计现金余额。"
-        }
-    },
-    "AccruedCash-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Accrued cash balance for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的累计现金余额。"
-        }
-    },
-    "AccruedCash-S": {
-        "value": "2843.91",
-        "currency": "USD",
-        "description": {
-            "en": "Accrued cash balance for the 'US Securities' segment.",
-            "zh": "美国证券交易段的累计现金余额。"
-        }
-    },
-    "AccruedDividend": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Accrued dividend amount. Represents dividends that have been earned but not yet paid out.",
-            "zh": "累计股息金额。代表已赚取但尚未支付的股息。"
-        }
-    },
-    "AccruedDividend-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Accrued dividend amount for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的累计股息金额。"
-        }
-    },
-    "AccruedDividend-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Accrued dividend amount for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的累计股息金额。"
-        }
-    },
-    "AccruedDividend-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Accrued dividend amount for the 'US Securities' segment.",
-            "zh": "美国证券交易段的累计股息金额。"
-        }
-    },
-    "AvailableFunds": {
-        "value": "993421.78",
-        "currency": "USD",
-        "description": {
-            "en": "Available funds for trading. The amount of money that can be used for new trades.",
-            "zh": "可用于交易的资金。可以用于新交易的金额。"
-        }
-    },
-    "AvailableFunds-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Available funds for trading in the 'US Commodities' segment.",
-            "zh": "美国商品交易段可用于交易的资金。"
-        }
-    },
-    "AvailableFunds-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Available funds for trading in the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段可用于交易的资金。"
-        }
-    },
-    "AvailableFunds-S": {
-        "value": "993421.78",
-        "currency": "USD",
-        "description": {
-            "en": "Available funds for trading in the 'US Securities' segment.",
-            "zh": "美国证券交易段可用于交易的资金。"
-        }
-    },
-    "Billable": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Billable amount. The amount that can be charged to the account for services or fees.",
-            "zh": "应收金额。可向账户收取服务或费用的金额。"
-        }
-    },
-    "Billable-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Billable amount for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的应收金额。"
-        }
-    },
-    "Billable-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Billable amount for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的应收金额。"
-        }
-    },
-    "Billable-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Billable amount for the 'US Securities' segment.",
-            "zh": "美国证券交易段的应收金额。"
-        }
-    },
-    "BuyingPower": {
-        "value": "3973687.12",
-        "currency": "USD",
-        "description": {
-            "en": "Buying power. The total value of securities that can be purchased on margin.",
-            "zh": "购买力。可以在保证金上购买的证券的总价值。"
-        }
-    },
-    "CashBalance": {
-        "value": "979865.00",
-        "currency": "USD",
-        "description": {
-            "en": "Cash balance. The total amount of cash available in the account.",
-            "zh": "现金余额。账户中可用的现金总额。"
-        }
-    },
-    "ColumnPrio-C": {
-        "value": "2",
-        "currency": "",
-        "description": {
-            "en": "Column priority for the 'US Commodities' segment. Determines the order in which data is displayed.",
-            "zh": "美国商品交易段的列优先级。决定数据显示的顺序。"
-        }
-    },
-    "ColumnPrio-P": {
-        "value": "5",
-        "currency": "",
-        "description": {
-            "en": "Column priority for the 'Crypto at Paxos' segment. Determines the order in which data is displayed.",
-            "zh": "Paxos加密货币段的列优先级。决定数据显示的顺序。"
-        }
-    },
-    "ColumnPrio-S": {
-        "value": "1",
-        "currency": "",
-        "description": {
-            "en": "Column priority for the 'US Securities' segment. Determines the order in which data is displayed.",
-            "zh": "美国证券交易段的列优先级。决定数据显示的顺序。"
-        }
-    },
-    "CorporateBondValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of corporate bonds. The total market value of corporate bonds held in the account.",
-            "zh": "公司债券价值。账户中持有的公司债券的总市场价值。"
-        }
-    },
-    "Cryptocurrency": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of cryptocurrency holdings. The total market value of cryptocurrencies held in the account.",
-            "zh": "加密货币持有价值。账户中持有的加密货币的总市场价值。"
-        }
-    },
-    "Currency": {
-        "value": "USD",
-        "currency": "USD",
-        "description": {
-            "en": "The currency. Specifies the currency in which the account operates.",
-            "zh": "货币。指定账户运作的货币。"
-        }
-    },
-    "Cushion": {
-        "value": "1",
-        "currency": "",
-        "description": {
-            "en": "Cushion value. A measure of how much the account value can drop before a margin call is triggered.",
-            "zh": "缓冲值。衡量账户价值在触发保证金催缴前可以下降多少的指标。"
-        }
-    },
-    "DayTradesRemaining": {
-        "value": "-1",
-        "currency": "",
-        "description": {
-            "en": "Number of day trades remaining. The count of day trades that can still be made within the current trading period.",
-            "zh": "剩余日内交易数。在当前交易周期内仍可进行的日内交易数量。"
-        }
-    },
-    "DayTradesRemainingT+1": {
-        "value": "-1",
-        "currency": "",
-        "description": {
-            "en": "Number of day trades remaining (T+1). The count of day trades that can be made on the next trading day.",
-            "zh": "剩余日内交易数（T+1）。在下一交易日可进行的日内交易数量。"
-        }
-    },
-    "DayTradesRemainingT+2": {
-        "value": "-1",
-        "currency": "",
-        "description": {
-            "en": "Number of day trades remaining (T+2). The count of day trades that can be made two trading days from now.",
-            "zh": "剩余日内交易数（T+2）。在两天后的交易日可进行的日内交易数量。"
-        }
-    },
-    "DayTradesRemainingT+3": {
-        "value": "-1",
-        "currency": "",
-        "description": {
-            "en": "Number of day trades remaining (T+3). The count of day trades that can be made three trading days from now.",
-            "zh": "剩余日内交易数（T+3）。在三天后的交易日可进行的日内交易数量。"
-        }
-    },
-    "DayTradesRemainingT+4": {
-        "value": "-1",
-        "currency": "",
-        "description": {
-            "en": "Number of day trades remaining (T+4). The count of day trades that can be made four trading days from now.",
-            "zh": "剩余日内交易数（T+4）。在四天后的交易日可进行的日内交易数量。"
-        }
-    },
-    "DayTradingStatus-S": {
-        "value": "::false:1000099.00::false",
-        "currency": "",
-        "description": {
-            "en": "Day trading status for the 'US Securities' segment. Indicates whether the account is flagged for pattern day trading.",
-            "zh": "美国证券交易段的日内交易状态。指示账户是否被标记为模式日内交易。"
-        }
-    },
-    "EquityWithLoanValue": {
-        "value": "1000099.00",
-        "currency": "USD",
-        "description": {
-            "en": "Equity with loan value. The total value of the account including any loans or margin.",
-            "zh": "带贷款价值的权益。包括任何贷款或保证金在内的账户总价值。"
-        }
-    },
-    "EquityWithLoanValue-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Equity with loan value for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的带贷款价值的权益。"
-        }
-    },
-    "EquityWithLoanValue-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Equity with loan value for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的带贷款价值的权益。"
-        }
-    },
-    "EquityWithLoanValue-S": {
-        "value": "1000099.00",
-        "currency": "USD",
-        "description": {
-            "en": "Equity with loan value for the 'US Securities' segment.",
-            "zh": "美国证券交易段的带贷款价值的权益。"
-        }
-    },
-    "ExcessLiquidity": {
-        "value": "994028.80",
-        "currency": "USD",
-        "description": {
-            "en": "Excess liquidity. The amount of cash in excess of the margin requirement.",
-            "zh": "超额流动性。超过保证金要求的现金金额。"
-        }
-    },
-    "ExcessLiquidity-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Excess liquidity for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的超额流动性。"
-        }
-    },
-    "ExcessLiquidity-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Excess liquidity for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的超额流动性。"
-        }
-    },
-    "ExcessLiquidity-S": {
-        "value": "994028.80",
-        "currency": "USD",
-        "description": {
-            "en": "Excess liquidity for the 'US Securities' segment.",
-            "zh": "美国证券交易段的超额流动性。"
-        }
-    },
-    "ExchangeRate": {
-        "value": "1.00",
-        "currency": "USD",
-        "description": {
-            "en": "Exchange rate. The rate at which one currency can be exchanged for another.",
-            "zh": "汇率。一货币可以兑换另一货币的比率。"
-        }
-    },
-    "FullAvailableFunds": {
-        "value": "993421.78",
-        "currency": "USD",
-        "description": {
-            "en": "Full available funds for trading. The total amount of funds available for trading, including any margin.",
-            "zh": "全部可用于交易的资金。包括任何保证金在内的可用于交易的总资金。"
-        }
-    },
-    "FullAvailableFunds-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Full available funds for trading in the 'US Commodities' segment.",
-            "zh": "美国商品交易段的全部可用于交易的资金。"
-        }
-    },
-    "FullAvailableFunds-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Full available funds for trading in the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的全部可用于交易的资金。"
-        }
-    },
-    "FullAvailableFunds-S": {
-        "value": "993421.78",
-        "currency": "USD",
-        "description": {
-            "en": "Full available funds for trading in the 'US Securities' segment.",
-            "zh": "美国证券交易段的全部可用于交易的资金。"
-        }
-    },
-    "FullExcessLiquidity": {
-        "value": "994028.80",
-        "currency": "USD",
-        "description": {
-            "en": "Full excess liquidity. The total amount of cash in excess of the full margin requirement.",
-            "zh": "全部超额流动性。超过全部保证金要求的现金总额。"
-        }
-    },
-    "FullExcessLiquidity-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Full excess liquidity for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的全部超额流动性。"
-        }
-    },
-    "FullExcessLiquidity-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Full excess liquidity for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的全部超额流动性。"
-        }
-    },
-    "FullExcessLiquidity-S": {
-        "value": "994028.80",
-        "currency": "USD",
-        "description": {
-            "en": "Full excess liquidity for the 'US Securities' segment.",
-            "zh": "美国证券交易段的全部超额流动性。"
-        }
-    },
-    "FullInitMarginReq": {
-        "value": "6677.22",
-        "currency": "USD",
-        "description": {
-            "en": "Full initial margin requirement. The total initial margin needed for all positions in the account.",
-            "zh": "全部初始保证金要求。账户中所有头寸所需的总初始保证金。"
-        }
-    },
-    "FullInitMarginReq-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Full initial margin requirement for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的全部初始保证金要求。"
-        }
-    },
-    "FullInitMarginReq-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Full initial margin requirement for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的全部初始保证金要求。"
-        }
-    },
-    "FullInitMarginReq-S": {
-        "value": "6677.22",
-        "currency": "USD",
-        "description": {
-            "en": "Full initial margin requirement for the 'US Securities' segment.",
-            "zh": "美国证券交易段的全部初始保证金要求。"
-        }
-    },
-    "FullMaintMarginReq": {
-        "value": "6070.20",
-        "currency": "USD",
-        "description": {
-            "en": "Full maintenance margin requirement. The total maintenance margin needed to keep all positions open.",
-            "zh": "全部维持保证金要求。保持所有头寸开放所需的总维持保证金。"
-        }
-    },
-    "FullMaintMarginReq-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Full maintenance margin requirement for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的全部维持保证金要求。"
-        }
-    },
-    "FullMaintMarginReq-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Full maintenance margin requirement for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的全部维持保证金要求。"
-        }
-    },
-    "FullMaintMarginReq-S": {
-        "value": "6070.20",
-        "currency": "USD",
-        "description": {
-            "en": "Full maintenance margin requirement for the 'US Securities' segment.",
-            "zh": "美国证券交易段的全部维持保证金要求。"
-        }
-    },
-    "FundValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of funds. The total market value of mutual funds or other investment funds held in the account.",
-            "zh": "基金价值。账户中持有的共同基金或其他投资基金的总市场价值。"
-        }
-    },
-    "FutureOptionValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of future options. The total market value of future options held in the account.",
-            "zh": "期货期权价值。账户中持有的期货期权的总市场价值。"
-        }
-    },
-    "FuturesPNL": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Futures Profit and Loss. The unrealized profit or loss from futures contracts.",
-            "zh": "期货盈亏。来自期货合约的未实现盈利或亏损。"
-        }
-    },
-    "FxCashBalance": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Foreign Exchange Cash Balance. The cash balance in foreign currencies.",
-            "zh": "外汇现金余额。以外币计的现金余额。"
-        }
-    },
-    "GrossPositionValue": {
-        "value": "20234.00",
-        "currency": "USD",
-        "description": {
-            "en": "Gross position value. The total market value of all positions in the account before any margin or leverage is applied.",
-            "zh": "总头寸价值。在应用任何保证金或杠杆之前，账户中所有头寸的总市场价值。"
-        }
-    },
-    "GrossPositionValue-S": {
-        "value": "20234.00",
-        "currency": "USD",
-        "description": {
-            "en": "Gross position value for the 'US Securities' segment.",
-            "zh": "美国证券交易段的总头寸价值。"
-        }
-    },
-    "Guarantee": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Guarantee amount. The amount guaranteed by a third party or by the broker.",
-            "zh": "担保金额。由第三方或经纪人担保的金额。"
-        }
-    },
-    "Guarantee-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Guarantee amount for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的担保金额。"
-        }
-    },
-    "Guarantee-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Guarantee amount for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的担保金额。"
-        }
-    },
-    "Guarantee-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Guarantee amount for the 'US Securities' segment.",
-            "zh": "美国证券交易段的担保金额。"
-        }
-    },
-    "IncentiveCoupons": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Incentive coupons amount. The value of any promotional coupons or incentives available for use.",
-            "zh": "激励优惠券金额。可用的任何促销优惠券或激励的价值。"
-        }
-    },
-    "IncentiveCoupons-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Incentive coupons amount for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的激励优惠券金额。"
-        }
-    },
-    "IncentiveCoupons-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Incentive coupons amount for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的激励优惠券金额。"
-        }
-    },
-    "IncentiveCoupons-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Incentive coupons amount for the 'US Securities' segment.",
-            "zh": "美国证券交易段的激励优惠券金额。"
-        }
-    },
-    "IndianStockHaircut": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Haircut applied to Indian stocks. A reduction in the value of Indian stocks for margin purposes.",
-            "zh": "应用于印度股票的折扣。为保证金目的而对印度股票价值的减少。"
-        }
-    },
-    "IndianStockHaircut-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Haircut applied to Indian stocks for the 'US Commodities' segment.",
-            "zh": "美国商品交易段应用于印度股票的折扣。"
-        }
-    },
-    "IndianStockHaircut-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Haircut applied to Indian stocks for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段应用于印度股票的折扣。"
-        }
-    },
-    "IndianStockHaircut-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Haircut applied to Indian stocks for the 'US Securities' segment.",
-            "zh": "美国证券交易段应用于印度股票的折扣。"
-        }
-    },
-    "InitMarginReq": {
-        "value": "6677.22",
-        "currency": "USD",
-        "description": {
-            "en": "Initial margin requirement. The amount of money required to open a new position.",
-            "zh": "初始保证金要求。开立新头寸所需的金额。"
-        }
-    },
-    "InitMarginReq-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Initial margin requirement for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的初始保证金要求。"
-        }
-    },
-    "InitMarginReq-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Initial margin requirement for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的初始保证金要求。"
-        }
-    },
-    "InitMarginReq-S": {
-        "value": "6677.22",
-        "currency": "USD",
-        "description": {
-            "en": "Initial margin requirement for the 'US Securities' segment.",
-            "zh": "美国证券交易段的初始保证金要求。"
-        }
-    },
-    "IssuerOptionValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of issuer options. The total market value of options issued by the company held in the account.",
-            "zh": "发行人期权价值。账户中持有的由公司发行的期权的总市场价值。"
-        }
-    },
-    "Leverage-S": {
-        "value": "0.02",
-        "currency": "",
-        "description": {
-            "en": "Leverage for the 'US Securities' segment. The ratio of the value of an investment to the amount of equity used to purchase it.",
-            "zh": "美国证券交易段的杠杆。投资价值与用于购买它的权益金额的比率。"
-        }
-    },
-    "LookAheadAvailableFunds": {
-        "value": "993421.78",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead available funds for trading. The projected amount of funds available for trading based on future transactions.",
-            "zh": "预期可用于交易的资金。基于未来交易的可用于交易的资金的预测金额。"
-        }
-    },
-    "LookAheadAvailableFunds-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead available funds for trading in the 'US Commodities' segment.",
-            "zh": "美国商品交易段的预期可用于交易的资金。"
-        }
-    },
-    "LookAheadAvailableFunds-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead available funds for trading in the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的预期可用于交易的资金。"
-        }
-    },
-    "LookAheadAvailableFunds-S": {
-        "value": "993421.78",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead available funds for trading in the 'US Securities' segment.",
-            "zh": "美国证券交易段的预期可用于交易的资金。"
-        }
-    },
-    "LookAheadExcessLiquidity": {
-        "value": "994028.80",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead excess liquidity. The projected amount of cash in excess of the margin requirement based on future transactions.",
-            "zh": "预期超额流动性。基于未来交易的超过保证金要求的现金的预测金额。"
-        }
-    },
-    "LookAheadExcessLiquidity-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead excess liquidity for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的预期超额流动性。"
-        }
-    },
-    "LookAheadExcessLiquidity-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead excess liquidity for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的预期超额流动性。"
-        }
-    },
-    "LookAheadExcessLiquidity-S": {
-        "value": "994028.80",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead excess liquidity for the 'US Securities' segment.",
-            "zh": "美国证券交易段的预期超额流动性。"
-        }
-    },
-    "LookAheadInitMarginReq": {
-        "value": "6677.22",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead initial margin requirement. The projected initial margin needed based on future transactions.",
-            "zh": "预期初始保证金要求。基于未来交易的所需初始保证金的预测。"
-        }
-    },
-    "LookAheadInitMarginReq-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead initial margin requirement for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的预期初始保证金要求。"
-        }
-    },
-    "LookAheadInitMarginReq-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead initial margin requirement for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的预期初始保证金要求。"
-        }
-    },
-    "LookAheadInitMarginReq-S": {
-        "value": "6677.22",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead initial margin requirement for the 'US Securities' segment.",
-            "zh": "美国证券交易段的预期初始保证金要求。"
-        }
-    },
-    "LookAheadMaintMarginReq": {
-        "value": "6070.20",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead maintenance margin requirement. The projected maintenance margin needed based on future transactions.",
-            "zh": "预期维持保证金要求。基于未来交易的所需维持保证金的预测。"
-        }
-    },
-    "LookAheadMaintMarginReq-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead maintenance margin requirement for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的预期维持保证金要求。"
-        }
-    },
-    "LookAheadMaintMarginReq-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead maintenance margin requirement for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的预期维持保证金要求。"
-        }
-    },
-    "LookAheadMaintMarginReq-S": {
-        "value": "6070.20",
-        "currency": "USD",
-        "description": {
-            "en": "Look-ahead maintenance margin requirement for the 'US Securities' segment.",
-            "zh": "美国证券交易段的预期维持保证金要求。"
-        }
-    },
-    "LookAheadNextChange": {
-        "value": "1749043800",
-        "currency": "",
-        "description": {
-            "en": "Timestamp of the next look-ahead change. The time when the next projected change in account values will occur.",
-            "zh": "下一次预期变化的时间戳。账户价值的下一次预期变化将发生的时间。"
-        }
-    },
-    "MaintMarginReq": {
-        "value": "6070.20",
-        "currency": "USD",
-        "description": {
-            "en": "Maintenance margin requirement. The amount of money required to keep an existing position open.",
-            "zh": "维持保证金要求。保持现有头寸开放所需的金额。"
-        }
-    },
-    "MaintMarginReq-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Maintenance margin requirement for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的维持保证金要求。"
-        }
-    },
-    "MaintMarginReq-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Maintenance margin requirement for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的维持保证金要求。"
-        }
-    },
-    "MaintMarginReq-S": {
-        "value": "6070.20",
-        "currency": "USD",
-        "description": {
-            "en": "Maintenance margin requirement for the 'US Securities' segment.",
-            "zh": "美国证券交易段的维持保证金要求。"
-        }
-    },
-    "MoneyMarketFundValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of money market funds. The total market value of money market funds held in the account.",
-            "zh": "货币市场基金价值。账户中持有的货币市场基金的总市场价值。"
-        }
-    },
-    "MutualFundValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of mutual funds. The total market value of mutual funds held in the account.",
-            "zh": "共同基金价值。账户中持有的共同基金的总市场价值。"
-        }
-    },
-    "NLVAndMarginInReview": {
-        "value": "false",
-        "currency": "",
-        "description": {
-            "en": "Indicates whether net liquidation value and margin are under review. A flag to show if these values are currently being reassessed.",
-            "zh": "指示净清算价值和保证金是否正在审查中。显示这些值当前是否正在重新评估的标志。"
-        }
-    },
-    "NetDividend": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Net dividend amount. The total amount of dividends received after any taxes or fees.",
-            "zh": "净股息金额。扣除任何税费后的总股息金额。"
-        }
-    },
-    "NetLiquidation": {
-        "value": "1002942.91",
-        "currency": "USD",
-        "description": {
-            "en": "Net liquidation value. The total value of the account if all positions were liquidated at the current market prices.",
-            "zh": "净清算价值。如果以当前市场价格清算所有头寸，账户的总价值。"
-        }
-    },
-    "NetLiquidation-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Net liquidation value for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的净清算价值。"
-        }
-    },
-    "NetLiquidation-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Net liquidation value for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的净清算价值。"
-        }
-    },
-    "NetLiquidation-S": {
-        "value": "1002942.91",
-        "currency": "USD",
-        "description": {
-            "en": "Net liquidation value for the 'US Securities' segment.",
-            "zh": "美国证券交易段的净清算价值。"
-        }
-    },
-    "NetLiquidationByCurrency": {
-        "value": "1002942.9096",
-        "currency": "USD",
-        "description": {
-            "en": "Net liquidation value by currency. The net liquidation value broken down by the currency in which the assets are held.",
-            "zh": "按货币划分的净清算价值。按持有资产的货币划分的净清算价值。"
-        }
-    },
-    "NetLiquidationUncertainty": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Net liquidation uncertainty. The potential variation in the net liquidation value due to market fluctuations.",
-            "zh": "净清算不确定性。由于市场波动导致的净清算价值的潜在变化。"
-        }
-    },
-    "OptionMarketValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of options. The total market value of options held in the account.",
-            "zh": "期权价值。账户中持有的期权的总市场价值。"
-        }
-    },
-    "PASharesValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of PA Shares. The total market value of Preferred Allocation shares held in the account.",
-            "zh": "优先分配股份价值。账户中持有的优先分配股份的总市场价值。"
-        }
-    },
-    "PASharesValue-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of PA Shares for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的优先分配股份价值。"
-        }
-    },
-    "PASharesValue-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of PA Shares for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的优先分配股份价值。"
-        }
-    },
-    "PASharesValue-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of PA Shares for the 'US Securities' segment.",
-            "zh": "美国证券交易段的优先分配股份价值。"
-        }
-    },
-    "PhysicalCertificateValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of physical certificates. The total market value of physical stock certificates held in the account.",
-            "zh": "实物证书价值。账户中持有的实物股票证书的总市场价值。"
-        }
-    },
-    "PhysicalCertificateValue-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of physical certificates for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的实物证书价值。"
-        }
-    },
-    "PhysicalCertificateValue-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of physical certificates for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的实物证书价值。"
-        }
-    },
-    "PhysicalCertificateValue-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of physical certificates for the 'US Securities' segment.",
-            "zh": "美国证券交易段的实物证书价值。"
-        }
-    },
-    "PostExpirationExcess": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Post expiration excess. The amount of cash available after the expiration of options or futures.",
-            "zh": "到期后超额。期权或期货到期后可用的现金金额。"
-        }
-    },
-    "PostExpirationExcess-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Post expiration excess for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的到期后超额。"
-        }
-    },
-    "PostExpirationExcess-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Post expiration excess for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的到期后超额。"
-        }
-    },
-    "PostExpirationExcess-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Post expiration excess for the 'US Securities' segment.",
-            "zh": "美国证券交易段的到期后超额。"
-        }
-    },
-    "PostExpirationMargin": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Post expiration margin. The margin requirement after the expiration of options or futures.",
-            "zh": "到期后保证金。期权或期货到期后的保证金要求。"
-        }
-    },
-    "PostExpirationMargin-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Post expiration margin for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的到期后保证金。"
-        }
-    },
-    "PostExpirationMargin-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Post expiration margin for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的到期后保证金。"
-        }
-    },
-    "PostExpirationMargin-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Post expiration margin for the 'US Securities' segment.",
-            "zh": "美国证券交易段的到期后保证金。"
-        }
-    },
-    "PreviousDayEquityWithLoanValue": {
-        "value": "1000175.00",
-        "currency": "USD",
-        "description": {
-            "en": "Previous day's equity with loan value. The total value of the account including any loans or margin from the previous trading day.",
-            "zh": "前一天的带贷款价值的权益。包括任何贷款或保证金在内的前一交易日的账户总价值。"
-        }
-    },
-    "PreviousDayEquityWithLoanValue-S": {
-        "value": "1000175.00",
-        "currency": "USD",
-        "description": {
-            "en": "Previous day's equity with loan value for the 'US Securities' segment.",
-            "zh": "美国证券交易段的前一天的带贷款价值的权益。"
-        }
-    },
-    "RealCurrency": {
-        "value": "USD",
-        "currency": "USD",
-        "description": {
-            "en": "The real currency. The actual currency in which the account operates, as opposed to any base or reporting currency.",
-            "zh": "实际货币。与任何基础或报告货币相对的账户运作的实际货币。"
-        }
-    },
-    "RealizedPnL": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Realized Profit and Loss. The profit or loss that has been realized from closed positions.",
-            "zh": "已实现盈亏。从已平仓头寸中实现的盈利或亏损。"
-        }
-    },
-    "RegTEquity": {
-        "value": "1002942.91",
-        "currency": "USD",
-        "description": {
-            "en": "Regulation T equity. The equity in the account as defined by Regulation T, which governs margin requirements.",
-            "zh": "T规则权益。根据管理保证金要求的T规则定义的账户中的权益。"
-        }
-    },
-    "RegTEquity-S": {
-        "value": "1002942.91",
-        "currency": "USD",
-        "description": {
-            "en": "Regulation T equity for the 'US Securities' segment.",
-            "zh": "美国证券交易段的T规则权益。"
-        }
-    },
-    "RegTMargin": {
-        "value": "10117.00",
-        "currency": "USD",
-        "description": {
-            "en": "Regulation T margin. The margin requirement as defined by Regulation T.",
-            "zh": "T规则保证金。根据T规则定义的保证金要求。"
-        }
-    },
-    "RegTMargin-S": {
-        "value": "10117.00",
-        "currency": "USD",
-        "description": {
-            "en": "Regulation T margin for the 'US Securities' segment.",
-            "zh": "美国证券交易段的T规则保证金。"
-        }
-    },
-    "SMA": {
-        "value": "992825.91",
-        "currency": "USD",
-        "description": {
-            "en": "Special Memorandum Account value. A line of credit that can be used to purchase securities on margin.",
-            "zh": "特别备忘录账户价值。可以用来在保证金上购买证券的信用额度。"
-        }
-    },
-    "SMA-S": {
-        "value": "992825.91",
-        "currency": "USD",
-        "description": {
-            "en": "Special Memorandum Account value for the 'US Securities' segment.",
-            "zh": "美国证券交易段的特别备忘录账户价值。"
-        }
-    },
-    "SegmentTitle-C": {
-        "value": "US Commodities",
-        "currency": "",
-        "description": {
-            "en": "Title of the 'US Commodities' segment. The name given to the segment dealing with US commodities.",
-            "zh": "美国商品交易段的标题。处理美国商品的段的名称。"
-        }
-    },
-    "SegmentTitle-P": {
-        "value": "Crypto at Paxos",
-        "currency": "",
-        "description": {
-            "en": "Title of the 'Crypto at Paxos' segment. The name given to the segment dealing with cryptocurrencies at Paxos.",
-            "zh": "Paxos加密货币段的标题。处理Paxos加密货币的段的名称。"
-        }
-    },
-    "SegmentTitle-S": {
-        "value": "US Securities",
-        "currency": "",
-        "description": {
-            "en": "Title of the 'US Securities' segment. The name given to the segment dealing with US securities.",
-            "zh": "美国证券交易段的标题。处理美国证券的段的名称。"
-        }
-    },
-    "StockMarketValue": {
-        "value": "20234.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of stocks. The total market value of stocks held in the account.",
-            "zh": "股票价值。账户中持有的股票的总市场价值。"
-        }
-    },
-    "TBillValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of T-Bills. The total market value of Treasury Bills held in the account.",
-            "zh": "国库券价值。账户中持有的国库券的总市场价值。"
-        }
-    },
-    "TBondValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of T-Bonds. The total market value of Treasury Bonds held in the account.",
-            "zh": "国债价值。账户中持有的国债的总市场价值。"
-        }
-    },
-    "TotalCashBalance": {
-        "value": "979865.00",
-        "currency": "USD",
-        "description": {
-            "en": "Total cash balance. The sum of all cash balances across different segments or currencies.",
-            "zh": "总现金余额。跨不同段或货币的所有现金余额的总和。"
-        }
-    },
-    "TotalCashValue": {
-        "value": "979865.00",
-        "currency": "USD",
-        "description": {
-            "en": "Total cash value. The total value of cash in the account, including any accrued cash.",
-            "zh": "总现金价值。包括任何累计现金在内的账户中的现金总价值。"
-        }
-    },
-    "TotalCashValue-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Total cash value for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的总现金价值。"
-        }
-    },
-    "TotalCashValue-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Total cash value for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的总现金价值。"
-        }
-    },
-    "TotalCashValue-S": {
-        "value": "979865.00",
-        "currency": "USD",
-        "description": {
-            "en": "Total cash value for the 'US Securities' segment.",
-            "zh": "美国证券交易段的总现金价值。"
-        }
-    },
-    "TotalDebitCardPendingCharges": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Total debit card pending charges. The sum of all pending charges on the account's debit card.",
-            "zh": "总借记卡待处理费用。账户借记卡上所有待处理费用的总和。"
-        }
-    },
-    "TotalDebitCardPendingCharges-C": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Total debit card pending charges for the 'US Commodities' segment.",
-            "zh": "美国商品交易段的总借记卡待处理费用。"
-        }
-    },
-    "TotalDebitCardPendingCharges-P": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Total debit card pending charges for the 'Crypto at Paxos' segment.",
-            "zh": "Paxos加密货币段的总借记卡待处理费用。"
-        }
-    },
-    "TotalDebitCardPendingCharges-S": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Total debit card pending charges for the 'US Securities' segment.",
-            "zh": "美国证券交易段的总借记卡待处理费用。"
-        }
-    },
-    "TradingType-S": {
-        "value": "STKNOPT",
-        "currency": "",
-        "description": {
-            "en": "Trading type for the 'US Securities' segment. Indicates the type of trading allowed in this segment.",
-            "zh": "美国证券交易段的交易类型。指示该段允许的交易类型。"
-        }
-    },
-    "UnrealizedPnL": {
-        "value": "99.00",
-        "currency": "USD",
-        "description": {
-            "en": "Unrealized Profit and Loss. The profit or loss that has not yet been realized from open positions.",
-            "zh": "未实现盈亏。从未平仓头寸中尚未实现的盈利或亏损。"
-        }
-    },
-    "WarrantValue": {
-        "value": "0.00",
-        "currency": "USD",
-        "description": {
-            "en": "Value of warrants. The total market value of warrants held in the account.",
-            "zh": "认股权证价值。账户中持有的认股权证的总市场价值。"
-        }
-    },
-    "WhatIfPMEnabled": {
-        "value": "true",
-        "currency": "",
-        "description": {
-            "en": "Indicates whether What-If Portfolio Management is enabled. A feature that allows users to simulate the effects of potential trades on their portfolio.",
-            "zh": "指示是否启用了假设性投资组合管理。允许用户模拟潜在交易对其投资组合的影响的功能。"
-        }
-    }
-}
+# Interactive Brokers API 服务
+
+这是一个基于 FastAPI 和 FastMCP 的 Interactive Brokers API 包装器，提供了简单易用的 REST API 接口来与 Interactive Brokers 进行交互。
+
+## 功能特点
+
+- 账户管理
+  - 账户连接状态监控
+  - 账户摘要信息
+  - 投资组合查询
+  - 盈亏查询
+  - 持仓查询
+
+- 市场数据
+  - 实时报价
+  - 历史K线数据
+  - 期权链数据
+
+- 基本面数据
+  - 公司概况
+  - 财务报表
+  - 分析师预测
+  - 所有权数据
+
+- 交易功能
+  - 多种订单类型支持
+    - 限价单
+    - 市价单
+    - 止损单
+    - 止损限价单
+  - 订单管理
+    - 修改订单
+    - 取消订单
+    - 订单状态查询
+
+## 系统要求
+
+- Python 3.13+ / uv
+- Interactive Brokers Trader Workstation (TWS) 或 IB Gateway
+
+## 安装
+
+1. 克隆仓库并进入项目目录
+
+2. 安装依赖：
+```bash
+uv sync
+```
+
+## 配置
+
+配置文件位置：
+```shell
+core/config.py
+```
+
+主要配置项：
+- TWS 连接设置（主机、端口、客户端ID）
+- API 服务器设置（主机、端口、根路径）
+- 日志设置（级别、文件路径）
+
+## 启动服务
+
+1. 确保 TWS 或 IB Gateway 已经运行并启用 API 连接
+
+2. 启动服务器：
+```bash
+uv run main.py
+```
+
+## API 端点
+
+### MCP
+
+- `GET /ib_api/mcp-server/sse` - 连接到 TWS
+
+### 账户信息
+
+- `GET /ib_api/account_info/connect` - 连接到 TWS
+- `GET /ib_api/account_info/account_status` - 获取连接状态
+- `GET /ib_api/account_info/disconnect` - 断开连接
+- `GET /ib_api/account_info/summary` - 获取账户摘要
+- `GET /ib_api/account_info/portfolio` - 获取投资组合
+- `GET /ib_api/account_info/positions` - 获取持仓信息
+- `GET /ib_api/account_info/pnl` - 获取盈亏信息
+
+### 市场数据
+
+- `GET /ib_api/market_data/quote/{symbol}` - 获取实时报价
+  - 参数：
+    - `exchange` - 交易所代码（默认：SMART）
+    - `currency` - 货币代码（默认：USD）
+
+- `GET /ib_api/market_data/history/{symbol}` - 获取历史数据
+  - 参数：
+    - `duration` - 数据时长（如：1 D, 1 W, 1 M）
+    - `bar_size` - K线周期（如：1 min, 5 mins, 1 hour）
+    - `exchange` - 交易所代码
+    - `currency` - 货币代码
+
+- `GET /ib_api/market_data/options/{symbol}` - 获取期权链数据
+  - 参数：
+    - `exchange` - 交易所代码
+    - `currency` - 货币代码
+
+### 基本面数据
+
+- `GET /ib_api/fundamental/profile/{symbol}` - 获取公司概况
+- `GET /ib_api/fundamental/financials/{symbol}` - 获取财务报表
+- `GET /ib_api/fundamental/estimates/{symbol}` - 获取分析师预测
+- `GET /ib_api/fundamental/ownership/{symbol}` - 获取所有权数据
+
+### 交易功能
+
+- `POST /ib_api/trading/order/limit` - 创建限价单
+  ```json
+  {
+    "symbol": "AAPL",
+    "quantity": 100,
+    "price": 150.0,
+    "action": "BUY",
+    "exchange": "SMART",
+    "currency": "USD",
+    "tif": "DAY"
+  }
+  ```
+
+- `POST /ib_api/trading/order/market` - 创建市价单
+  ```json
+  {
+    "symbol": "AAPL",
+    "quantity": 100,
+    "action": "BUY",
+    "exchange": "SMART",
+    "currency": "USD"
+  }
+  ```
+
+- `POST /ib_api/trading/order/stop` - 创建止损单
+  ```json
+  {
+    "symbol": "AAPL",
+    "quantity": 100,
+    "stop_price": 145.0,
+    "action": "SELL",
+    "exchange": "SMART",
+    "currency": "USD"
+  }
+  ```
+
+- `POST /ib_api/trading/order/stop-limit` - 创建止损限价单
+  ```json
+  {
+    "symbol": "AAPL",
+    "quantity": 100,
+    "stop_price": 145.0,
+    "limit_price": 144.0,
+    "action": "SELL",
+    "exchange": "SMART",
+    "currency": "USD"
+  }
+  ```
+
+- `PUT /ib_api/trading/order/{order_id}` - 修改订单
+  ```json
+  {
+    "quantity": 200,
+    "price": 155.0
+  }
+  ```
+
+- `DELETE /ib_api/trading/order/{order_id}` - 取消订单
+- `GET /ib_api/trading/order/{order_id}` - 获取订单状态
+- `GET /ib_api/trading/orders` - 获取所有订单
+
+
+## 注意事项
+
+1. 在使用 API 之前，请确保：
+   - TWS 或 IB Gateway 已启动
+   - API 连接已启用
+   - 端口设置正确
+
+## 许可证
+
+MIT
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request！
