@@ -17,7 +17,7 @@ async def get_profile(
 ):
     """获取公司概况"""
     try:
-        profile = get_company_profile(symbol, exchange)
+        _, profile = await get_company_profile(symbol, exchange)
         return ApiResponse.success(profile)
     except Exception as e:
         return ApiResponse.error(f"获取公司概况失败: {str(e)}")
@@ -30,7 +30,7 @@ async def get_financials(
 ):
     """获取财务报表"""
     try:
-        statements = get_financial_statements(symbol, exchange)
+        _, statements = await get_financial_statements(symbol, exchange)
         return ApiResponse.success(statements)
     except Exception as e:
         return ApiResponse.error(f"获取财务报表失败: {str(e)}")
@@ -43,7 +43,7 @@ async def get_estimates(
 ):
     """获取分析师预测"""
     try:
-        estimates = get_analyst_estimates(symbol, exchange)
+        _, estimates = await get_analyst_estimates(symbol, exchange)
         return ApiResponse.success(estimates)
     except Exception as e:
         return ApiResponse.error(f"获取分析师预测失败: {str(e)}")
@@ -56,7 +56,7 @@ async def get_ownership(
 ):
     """获取所有权数据"""
     try:
-        ownership = get_ownership_data(symbol, exchange)
+        _, ownership = await get_ownership_data(symbol, exchange)
         return ApiResponse.success(ownership)
     except Exception as e:
         return ApiResponse.error(f"获取所有权数据失败: {str(e)}")

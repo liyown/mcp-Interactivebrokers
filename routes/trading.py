@@ -27,7 +27,7 @@ async def create_limit_order(
 ):
     """创建限价单"""
     try:
-        order = place_limit_order(
+        _, order = await place_limit_order(
             symbol=symbol,
             quantity=quantity,
             price=price,
@@ -51,7 +51,7 @@ async def create_market_order(
 ):
     """创建市价单"""
     try:
-        order = place_market_order(
+        _, order = await place_market_order(
             symbol=symbol,
             quantity=quantity,
             action=action,
@@ -74,7 +74,7 @@ async def create_stop_order(
 ):
     """创建止损单"""
     try:
-        order = place_stop_order(
+        _, order = await place_stop_order(
             symbol=symbol,
             quantity=quantity,
             stop_price=stop_price,
@@ -99,7 +99,7 @@ async def create_stop_limit_order(
 ):
     """创建止损限价单"""
     try:
-        order = place_stop_limit_order(
+        _, order = await place_stop_limit_order(
             symbol=symbol,
             quantity=quantity,
             stop_price=stop_price,
@@ -121,7 +121,7 @@ async def update_order(
 ):
     """修改订单"""
     try:
-        order = modify_order(
+        _, order = await modify_order(
             order_id=order_id,
             new_quantity=quantity,
             new_price=price,
@@ -135,7 +135,7 @@ async def update_order(
 async def delete_order(order_id: int):
     """取消订单"""
     try:
-        result = cancel_order(order_id)
+        _, result = await cancel_order(order_id)
         return ApiResponse.success(result)
     except Exception as e:
         return ApiResponse.error(f"取消订单失败: {str(e)}")
@@ -145,7 +145,7 @@ async def delete_order(order_id: int):
 async def get_order(order_id: int):
     """获取订单状态"""
     try:
-        order = get_order_status(order_id)
+        _, order = await get_order_status(order_id)
         return ApiResponse.success(order)
     except Exception as e:
         return ApiResponse.error(f"获取订单状态失败: {str(e)}")
@@ -155,7 +155,7 @@ async def get_order(order_id: int):
 async def get_orders():
     """获取所有订单"""
     try:
-        orders = get_order_status()
+        _, orders = await get_order_status()
         return ApiResponse.success(orders)
     except Exception as e:
         return ApiResponse.error(f"获取订单列表失败: {str(e)}")

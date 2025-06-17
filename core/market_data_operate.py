@@ -1,7 +1,7 @@
 from ib_async import Stock
 from core import ib
 from typing import Optional
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 def get_stock_quote(symbol: str, exchange: str = "SMART", currency: str = "USD"):
@@ -13,7 +13,8 @@ def get_stock_quote(symbol: str, exchange: str = "SMART", currency: str = "USD")
     ticker = ib.reqMktData(contract)
     try:
         ib.sleep(2)  # 等待数据返回
-        return f"""<quote>
+        return (
+            f"""<quote>
             <symbol>
                 <value>{contract.symbol}</value>
                 <description>Stock symbol</description>
@@ -42,12 +43,14 @@ def get_stock_quote(symbol: str, exchange: str = "SMART", currency: str = "USD")
                 <value>{ticker.low}</value>
                 <description>Day low</description>
             </low>
-        </quote>"""
+        </quote>""",
+            ticker,
+        )
     finally:
         ib.cancelMktData(contract)
 
 
-def get_historical_data(
+async def get_historical_data(
     symbol: str,
     duration: str = "1 D",
     bar_size: str = "1 min",
@@ -66,19 +69,22 @@ def get_historical_data(
         end_datetime: 结束时间，默认为当前时间
     """
     contract = Stock(symbol, exchange, currency)
-    ib.qualifyContracts(contract)
+    contract = await ib.qualifyContractsAsync(contract)
 
     if end_datetime is None:
-        end_datetime = datetime.now()
+        end_datetime = datetime.now(timezone.utc)
 
-    bars = ib.reqHistoricalData(
-        contract,
+    bars = await ib.reqHistoricalDataAsync(
+        contract[0],
         endDateTime=end_datetime,
         durationStr=duration,
         barSizeSetting=bar_size,
         whatToShow="TRADES",
         useRTH=True,
     )
+
+    # 最新日期在最上面
+    bars.reverse()
 
     formatted_bars = []
     for bar in bars:
@@ -109,19 +115,21 @@ def get_historical_data(
             </volume>
         </bar>""")
 
-    return formatted_bars
+    return formatted_bars, bars
 
 
-def get_option_chain(
+async def get_option_chain(
     symbol: str,
     exchange: str = "SMART",
     currency: str = "USD",
 ):
     """获取期权链数据"""
     stock = Stock(symbol, exchange, currency)
-    ib.qualifyContracts(stock)
+    await ib.qualifyContractsAsync(stock)
 
-    chains = ib.reqSecDefOptParams(stock.symbol, "", stock.secType, stock.conId)
+    chains = await ib.reqSecDefOptParamsAsync(
+        stock.symbol, "", stock.secType, stock.conId
+    )
 
     formatted_chains = []
     for chain in chains:
@@ -140,4 +148,4 @@ def get_option_chain(
             </expirations>
         </optionChain>""")
 
-    return formatted_chains
+    return formatted_chains, chains

@@ -41,7 +41,7 @@ async def connect_ib():
         return ApiResponse.success("IB already connected")
     try:
         await ib.connectAsync(
-            get_settings().TWS_HOST, get_settings().TWS_PORT, clientId=1
+            get_settings().TWS_HOST, get_settings().TWS_PORT, clientId=0
         )
         return ApiResponse.success("IB connected")
     except Exception as e:
@@ -71,7 +71,37 @@ async def get_account_positions():
 @account_info_router.get("/portfolio")
 async def get_account_portfolio():
     portfolio = ib.portfolio()
-    return ApiResponse.success(portfolio)
+
+    # 按 secType 和 marketValue 统计
+    portfolio_summary = {}
+    total_value = 0
+
+    # 首先计算总值
+    for item in portfolio:
+        total_value += item.marketValue
+
+    # 计算每个类型的值和百分比
+    for item in portfolio:
+        sec_type = item.contract.secType
+        if sec_type not in portfolio_summary:
+            portfolio_summary[sec_type] = {"value": 0, "percentage": 0}
+        portfolio_summary[sec_type]["value"] += item.marketValue
+
+    # 计算百分比
+    for sec_type in portfolio_summary:
+        portfolio_summary[sec_type]["percentage"] = (
+            round((portfolio_summary[sec_type]["value"] / total_value * 100), 2)
+            if total_value > 0
+            else 0
+        )
+
+    return ApiResponse.success(
+        {
+            "portfolio": portfolio,
+            "summary": portfolio_summary,
+            "total_value": total_value,
+        }
+    )
 
 
 @account_info_router.get("/trades")

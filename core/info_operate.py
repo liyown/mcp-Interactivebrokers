@@ -93,6 +93,4 @@ def get_account_summary():
                 </{value.tag}>"""
     result += "</accountSummary>"
 
-    print(result)
-
     return result

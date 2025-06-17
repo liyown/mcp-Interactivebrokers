@@ -17,7 +17,7 @@ async def get_quote(
 ):
     """获取股票实时报价"""
     try:
-        quote = get_stock_quote(symbol, exchange, currency)
+        _, quote = get_stock_quote(symbol, exchange, currency)
         return ApiResponse.success(quote)
     except Exception as e:
         return ApiResponse.error(f"获取报价失败: {str(e)}")
@@ -35,14 +35,14 @@ async def get_history(
 ):
     """获取历史数据"""
     try:
-        bars = get_historical_data(
+        _, raw_bars = await get_historical_data(
             symbol,
             duration=duration,
             bar_size=bar_size,
             exchange=exchange,
             currency=currency,
         )
-        return ApiResponse.success(bars)
+        return ApiResponse.success(raw_bars)
     except Exception as e:
         return ApiResponse.error(f"获取历史数据失败: {str(e)}")
 
@@ -55,7 +55,7 @@ async def get_options(
 ):
     """获取期权链数据"""
     try:
-        chains = get_option_chain(symbol, exchange, currency)
+        _, chains = await get_option_chain(symbol, exchange, currency)
         return ApiResponse.success(chains)
     except Exception as e:
         return ApiResponse.error(f"获取期权链数据失败: {str(e)}")

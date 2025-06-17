@@ -1,10 +1,19 @@
-from ib_async import Order, Stock, LimitOrder, MarketOrder, StopOrder, StopLimitOrder
+from ib_async import (
+    Order,
+    Stock,
+    LimitOrder,
+    MarketOrder,
+    StopOrder,
+    StopLimitOrder,
+    Trade,
+)
 from core.constant import OrderAction, OrderType
 from core import ib
 from typing import Optional
+from core.websocket import websocket_manager
 
 
-def place_limit_order(
+async def place_limit_order(
     symbol: str,
     quantity: int,
     price: float,
@@ -18,11 +27,13 @@ def place_limit_order(
     contract = Stock(symbol, exchange, currency)
     trade = ib.placeOrder(contract, order)
     if trade:
-        return format_order_response(trade)
-    return None
+        # 异步发送WebSocket通知
+        await _send_order_notification_async(trade, "创建")
+        return format_order_response(trade), trade
+    return None, None
 
 
-def place_market_order(
+async def place_market_order(
     symbol: str,
     quantity: int,
     action: str = OrderAction.BUY.value,
@@ -37,11 +48,13 @@ def place_market_order(
     contract = Stock(symbol, exchange, currency)
     trade = ib.placeOrder(contract, order)
     if trade:
-        return format_order_response(trade)
-    return None
+        # 异步发送WebSocket通知
+        await _send_order_notification_async(trade, "创建")
+        return format_order_response(trade), trade
+    return None, None
 
 
-def place_stop_order(
+async def place_stop_order(
     symbol: str,
     quantity: int,
     stop_price: float,
@@ -58,11 +71,13 @@ def place_stop_order(
     contract = Stock(symbol, exchange, currency)
     trade = ib.placeOrder(contract, order)
     if trade:
-        return format_order_response(trade)
-    return None
+        # 异步发送WebSocket通知
+        await _send_order_notification_async(trade, "创建")
+        return format_order_response(trade), trade
+    return None, None
 
 
-def place_stop_limit_order(
+async def place_stop_limit_order(
     symbol: str,
     quantity: int,
     stop_price: float,
@@ -81,11 +96,13 @@ def place_stop_limit_order(
     contract = Stock(symbol, exchange, currency)
     trade = ib.placeOrder(contract, order)
     if trade:
-        return format_order_response(trade)
-    return None
+        # 异步发送WebSocket通知
+        await _send_order_notification_async(trade, "创建")
+        return format_order_response(trade), trade
+    return None, None
 
 
-def modify_order(
+async def modify_order(
     order_id: int,
     new_quantity: Optional[int] = None,
     new_price: Optional[float] = None,
@@ -111,36 +128,54 @@ def modify_order(
             ib.cancelOrder(trade.order)
             modified_trade = ib.placeOrder(trade.contract, new_order)
             if modified_trade:
-                return format_order_response(modified_trade)
-    return None
+                # 异步发送WebSocket通知
+                await _send_order_notification_async(modified_trade, "修改")
+                return format_order_response(modified_trade), modified_trade
+    return None, None
 
 
-def cancel_order(order_id: int):
+async def cancel_order(order_id: int):
     """取消订单"""
+    # 先获取订单信息用于通知
+    trades = ib.trades()
+    canceled_trade = None
+    for trade in trades:
+        if trade.order.orderId == order_id:
+            canceled_trade = trade
+            break
+
     order = Order()
     order.orderId = order_id
     ib.cancelOrder(order)
-    return f"""<cancelOrder>
+
+    # 如果找到了订单信息，发送WebSocket通知
+    if canceled_trade:
+        await _send_order_notification_async(canceled_trade, "取消")
+
+    return (
+        f"""<cancelOrder>
         <orderId>
             <value>{order_id}</value>
             <description>ID of the cancelled order</description>
         </orderId>
-    </cancelOrder>"""
+    </cancelOrder>""",
+        order_id,
+    )
 
 
-def get_order_status(order_id: Optional[int] = None):
+async def get_order_status(order_id: Optional[int] = None):
     """获取订单状态"""
     trades = ib.trades()
     if order_id is None:
-        return [format_order_response(trade) for trade in trades]
+        return [format_order_response(trade) for trade in trades], trades
     else:
         for trade in trades:
             if trade.order.orderId == order_id:
-                return format_order_response(trade)
-    return None
+                return format_order_response(trade), trade
+    return None, None
 
 
-def format_order_response(trade):
+def format_order_response(trade: Trade):
     """格式化订单响应"""
     return f"""<orderStatus>
         <orderId>
@@ -183,12 +218,13 @@ def format_order_response(trade):
             <value>{trade.orderStatus.avgFillPrice}</value>
             <description>Average fill price</description>
         </avgFillPrice>
-        <lastFillTime>
-            <value>{trade.orderStatus.lastFillTime}</value>
-            <description>Last fill time</description>
-        </lastFillTime>
         <whyHeld>
             <value>{trade.orderStatus.whyHeld}</value>
             <description>Why order is held</description>
         </whyHeld>
     </orderStatus>"""
+
+
+async def _send_order_notification_async(trade: Trade, action: str):
+    """异步发送订单通知到WebSocket客户端"""
+    await websocket_manager.send_order_notification(trade, action)
